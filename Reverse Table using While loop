@@ -1,0 +1,7 @@
+n=int(input('Enter the table number : '))
+b=int(input('Enter the number of times : '))
+i=10
+while i>=b:
+    p = n * i
+    print(n,'x',i,'=',p)
+    i=i-1
