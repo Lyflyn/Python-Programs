@@ -1,0 +1,27 @@
+size = int(input('Enter matrix 1 : ')) 
+a = []
+for i in range(size):
+    x=i+1
+    a.append([int(y) for y in input(f'Elements of row {x} : ').split()])
+print(a)
+
+size = int(input('Enter matrix 2 : ')) 
+b = []
+for i in range(size):
+    x=i+1
+    b.append([int(y) for y in input(f'Elements of row {x} : ').split()])
+print(b)
+
+if len(a[0])!=len(b):
+    print ("Cannot multiply the two matrices. Incorrect dimensions.")
+
+else:
+    result = [[0 for i in range(len(b[0]))] for j in range(len(a))]
+    for i in range(len(a)):
+        for j in range(len(b[0])):
+            for k in range(len(b)):
+                result[i][j] +=a[i][k] * b[k][j]
+
+    print('Matrix Multiplication : ')
+    for r in result:
+        print(r)
